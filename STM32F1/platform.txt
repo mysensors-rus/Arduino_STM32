@@ -144,6 +144,17 @@ tools.stlink_upload.path.linux64={runtime.hardware.path}/tools/linux64
 tools.stlink_upload.upload.params.verbose=-d
 tools.stlink_upload.upload.params.quiet=
 tools.stlink_upload.upload.pattern="{path}/{cmd}"  "{build.path}/{build.project_name}.bin"
+
+# stlink upload_bootloader
+tools.stlink_upload.cmd=stlink_upload_bootloader
+tools.stlink_upload.cmd.windows=stlink_upload_bootloader.bat
+tools.stlink_upload.path.windows={runtime.hardware.path}/tools/win
+tools.stlink_upload.path.macosx={runtime.hardware.path}/tools/macosx
+tools.stlink_upload.path.linux={runtime.hardware.path}/tools/linux
+tools.stlink_upload.path.linux64={runtime.hardware.path}/tools/linux64
+tools.stlink_upload.upload.params.verbose=-d
+tools.stlink_upload.upload.params.quiet=
+tools.stlink_upload.upload.pattern="{path}/{cmd}" {upload.addr} "{build.path}/{build.project_name}.bin"
  
 # blackmagic probe upload
 tools.bmp_upload.cmd=arm-none-eabi-gdb
